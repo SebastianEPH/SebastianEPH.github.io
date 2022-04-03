@@ -13,7 +13,7 @@ function App_Routers() {
   return (
     <HashRouter>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+        {/*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>*/}
         {/*<BrowserRouter>*/}
         <Navbar/>
         <Routes>
@@ -21,13 +21,10 @@ function App_Routers() {
             <Route path="/" exact element={
                 <div className="container-fluid">
                     <br/>
-
-
                     <p>Main </p>
                     {/*<SearchProject/>*/}
                     {/*<br/>*/}
                     <ListProject/>
-
                     {/*<ListProforma/>*/}
                     <br/>
                 </div>

@@ -1,50 +1,83 @@
 import {UseProject} from "./UseProject";
 import "./ListProject.css"
 import {Link} from "react-router-dom";
+import {Col, Container, Row} from "react-bootstrap";
 export const ListProject =()=>{
 
-    const {project, getProject} = UseProject([])
+    const {projects, getProjects} = UseProject([])
 
-    console.log("projecto uno=> ",project)
+    console.log("projecto uno=> ",projects)
     return(
-        <>
-            {project.map(({id, name, data_init, data_finish, web_deploy, description,repository, documentation,type, img,tools, language},index)=>{
-                return(
-                    <div key={index+id} className={"m-1 p-2 pb-5"} >
-                        <div className="content">
-                            <div className="card">
-                                <div className="firstinfo">
-                                    <img  src={img} alt={"img-"+(name||"")}/>
-                                    <div className="profileinfo">
-                                        <h1>{name}</h1>
-                                        <h3>{type}</h3>
-                                        <p className="bio">{description}</p>
+        <Container>
+           <Row>
+               {projects.map(({id, name, data_init, data_finish, web_deploy, description,repository, documentation,type, img,tools, language}, index)=>{
+                   return(
+                       <Col md={6} className={"p-3 "} key={index+id}>
+                            <div className="card widget-flat ccard">
+                                <div className="card-body">
+                                    <div className="float-end">
+                                        <i className="mdi mdi-account-multiple widget-icon"/>
                                     </div>
-                                    <div className={"row p-0 m-0"}>
-                                        <button type="button" className="btn btn-outline-primary">Ir a repositorio </button>
-                                        <Link to={`/project/${id}`} className="btn btn-outline-primary">Ver Detalles </Link>
-                                    </div>
+                                    <h5 id={"title"} className=" fw-normal mt-0"
+                                        title="Number of Customers">{type}</h5>
+                                    <h3 className="mt-3 mb-3">{name}</h3>
+                                    <p className="mb-0 text-muted">
+                                    <Link to={`/project/${id}`}>
+                                        <table className="table mb-0 ">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    {tools.map((data, index)=> <img id={"tooltip"} key={index+(data.tools)}  className={"img-icon table-item"}  src={data.icon} alt={data.tools}/>)}
+                                                    {language.map((data, index)=><img key={index+(data.language)} className={"img-icon table-item"}  src={data.icon} alt={data.language} />)}
+                                                </th>
+                                                <th scope="col" className={"text-end "}>
+                                                    {/*<div  className={"text-end "}>*/}
+                                                        <span className="table-item fw-lighter table ">18 de agoto 2020</span>
+                                                        {/*<span className="text-success me-2 text-end"><i className="mdi mdi-arrow-up-bold"/> 5.27%</span>*/}
+                                                    {/*</div>*/}
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                        </table>
+                                    </Link>
+                                    </p>
                                 </div>
-                                <small className="text-muted text-end">Last updated </small>
                             </div>
-                            <div className="badgescard">
-                                {tools.map((data, index)=>{
-                                    return(
-                                        <img key={index+(data.tools)} className={"img-icon"}  src={data.icon} alt={data.tools} />
-                                    )
-                                })}
-                                {language.map((data, index)=>{
-                                    return(
-                                        <img key={index+(data.language)} className={"img-icon"}  src={data.icon} alt={data.language} />
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                )
-            })}
-        </>
+                       </Col>
+                   )
+               })}
+           </Row>
+        </Container>
     )
 }
 
+// {/*<div className="ccontent">*/}
+// {/*    <div className="ccard">*/}
+// {/*        <div className="ffirstinfo">*/}
+// {/*            <img  src={img} alt={"img-"+(name||"")}/>*/}
+// {/*            <div className="profileinfo">*/}
+// {/*                <h1>}</h1>*/}
+// {/*                <h3></h3>*/}
+// {/*                <p className="bio">{description}</p>*/}
+// {/*            </div>*/}
+// {/*            <div className={"row p-0 m-0"}>*/}
+// {/*                <button type="button" className="btn btn-outline-primary">Ir a repositorio </button>*/}
+// {/*                /!*<Link to={`/project/${id}`} className="btn btn-outline-primary">Ver Detalles </Link>*!/*/}
+// {/*            </div>*/}
+// {/*        </div>*/}
+// {/*        <small className="text-muted text-end">Last updated </small>*/}
+// {/*    </div>*/}
+// {/*<div className="bbadgescard">*/}
+// {/*    {tools.map((data, index)=>{*/}
+// {/*        return(*/}
+// {/*            <img key={index+(data.tools)} className={"img-icon"}  src={data.icon} alt={data.tools} />*/}
+// {/*        )*/}
+// {/*    })}*/}
+// {/*    {language.map((data, index)=>{*/}
+// {/*        return(*/}
+// {/*            <img key={index+(data.language)} className={"img-icon"}  src={data.icon} alt={data.language} />*/}
+// {/*        )*/}
+// {/*    })}*/}
+// {/*</div>*/}
+// {/*    </div>*/}
 
