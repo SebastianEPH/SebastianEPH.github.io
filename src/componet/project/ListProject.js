@@ -18,17 +18,17 @@ export const ListProject =()=>{
                                     <div className="float-end">
                                         <i className="mdi mdi-account-multiple widget-icon"/>
                                     </div>
-                                    <h5 id={"title"} className=" fw-normal mt-0"
-                                        title="Number of Customers">{type}</h5>
-                                    <h3 className="mt-3 mb-3">{name}</h3>
+                                    <h6 id={"title"} className=" fw-normal mt-0"
+                                        title="Number of Customers">{type}</h6>
+                                    <h4 className="mt-3 mb-3">{name}</h4>
                                     <p className="mb-0 text-muted">
                                     <Link to={`/project/${id}`}>
                                         <table className="table mb-0 ">
                                             <thead>
                                             <tr>
                                                 <th scope="col">
-                                                    {tools.map((data, index)=> <img id={"tooltip"} key={index+(data.tools)}  className={"img-icon table-item"}  src={data.icon} alt={data.tools}/>)}
-                                                    {language.map((data, index)=><img key={index+(data.language)} className={"img-icon table-item"}  src={data.icon} alt={data.language} />)}
+                                                    {tools &&  tools.map((data, index)=> <img id={"tooltip"} key={index+(data.tools)}  className={"img-icon table-item"}  src={data.icon} alt={data.tools}/>)}
+                                                    {language && language.map((data, index)=><img key={index+(data.language)} className={"img-icon table-item"}  src={data.icon} alt={data.language} />)}
                                                 </th>
                                                 <th scope="col" className={"text-end "}>
                                                     {/*<div  className={"text-end "}>*/}
