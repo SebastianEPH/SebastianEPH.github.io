@@ -8,16 +8,20 @@ import {
 import {ListProject} from "./componet/project/ListProject";
 import {Navbar} from "react-bootstrap";
 import {Project} from "./componet/project/Project";
+import {AddProject} from "./componet/project/AddProject/AddProject";
+import {UpdateProject} from "./componet/project/UpdateProject/UpdateProject";
 
 function App_Routers() {
   return (
     <HashRouter>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
+        {/*<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>*/}
         {/*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>*/}
         {/*<BrowserRouter>*/}
         <Navbar/>
         <Routes>
             <Route path="/project/:project_id"  exact element={<Project/>}/>
+            <Route path="/project/add/"  exact element={<AddProject/>}/>
+            <Route path="/project/update/:project_id"  exact element={<UpdateProject/>}/>
             <Route path="/" exact element={
                 <div className="container-fluid">
                     <br/>

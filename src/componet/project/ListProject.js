@@ -7,12 +7,20 @@ export const ListProject =()=>{
     const {projects, getProjects} = UseProject([])
 
     console.log("projecto uno=> ",projects)
+
+    const rand =()=>{
+        return Math.floor(Math.random() * (15-1 + 1)) + 1
+    }
+
     return(
         <Container>
            <Row>
+               <Link to={"/project/add"}>
+
+               </Link>
                {projects.map(({id, name, data_init, data_finish, web_deploy, description,repository, documentation,type, img,tools, language}, index)=>{
                    return(
-                       <Col md={6} className={"p-3 "} key={index+id}>
+                       <Col md={6} className={"p-3 "} key={index+ rand +id}>
                             <div className="card widget-flat ccard">
                                 <div className="card-body">
                                     <div className="float-end">
@@ -27,12 +35,12 @@ export const ListProject =()=>{
                                             <thead>
                                             <tr>
                                                 <th scope="col">
-                                                    {tools &&  tools.map((data, index)=> <img id={"tooltip"} key={index+(data.tools)}  className={"img-icon table-item"}  src={data.icon} alt={data.tools}/>)}
-                                                    {language && language.map((data, index)=><img key={index+(data.language)} className={"img-icon table-item"}  src={data.icon} alt={data.language} />)}
+                                                    {tools &&  tools.map((data, index)=> <img key={index+(data.tools)} style={{width: "40px"}}  src={data.icon} alt={data.tools}/>)}
+                                                    {language && language.map((data, index)=><img key={index+(data.language)} style={{width: "40px"}}  src={data.icon} alt={data.language} />)}
                                                 </th>
                                                 <th scope="col" className={"text-end "}>
                                                     {/*<div  className={"text-end "}>*/}
-                                                        <span className="table-item fw-lighter table ">18 de agoto 2020</span>
+                                                        <span className=" fw-lighter ">18 de agoto 2020</span>
                                                         {/*<span className="text-success me-2 text-end"><i className="mdi mdi-arrow-up-bold"/> 5.27%</span>*/}
                                                     {/*</div>*/}
                                                 </th>

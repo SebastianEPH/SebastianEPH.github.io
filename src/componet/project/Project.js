@@ -14,7 +14,7 @@ export const Project = ()=>{
     // si es undefined el id
 
     const {id, person, name,version, type,architecture, state, size, platform, licence, ide,
-    note,description, tools, language, feature, screenshot, repository, documentation} = project
+    note,description, tools, language,img, feature, screenshot, repository, documentation, web_deploy} = project
     console.log(project)
     // const {name_short} = person
 
@@ -136,23 +136,62 @@ export const Project = ()=>{
                     <p id={"card_description"}>{description}</p>
                 </Row>:false
             }
-            {/*style{{"":""}}*/}
-            <Row className={"mt-5 mb-4"}>
-                <Col>
+
+            {img&&
+                <Row className={"mt-5 card card-container"}>
+                    <h3 id={"card_title"}>Imagen:</h3>
+                    <ul className="list-group list-group-numbered">
+                        <img  id={"screenshot-item"} className={"mt-3"}   src={img} alt="imagen web"/>
+                    </ul>
+                </Row>
+            }
+            {web_deploy&&
+                <Row className={"mb-4 mt-4"}>
+                    <Button id={"button-info"}  href={web_deploy}>
+                <span  className={"p-5"}>Ver aplicación web despleada
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                             className="ms-2 bi bi-box-arrow-up-right" viewBox="0 0 22 22">
+                          <path fillRule="event"
+                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                          <path fillRule="event"
+                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                </span>
+                    </Button>
+                </Row>
+            }
+            <Row className={"mt-4 mb-0 "}>
+                <Col className={"me-2"}>
                     <Row>
-                        <Button id={"button-info"}  href={repository}><span  className={"p-5"}>Ir a ver Código en github</span></Button>
+                        <Button id={"button-info"}  href={repository}><span >Ir a ver Código en github
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                             className="ms-2 bi bi-box-arrow-up-right" viewBox="0 0 22 22">
+                          <path fillRule="event"
+                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                          <path fillRule="event"
+                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                        </span></Button>
                     </Row>
                 </Col>
-                <Col>
+                <Col className={"ms-2"}>
                     <Row>
-                        <Button id={"button-info"} href={documentation}>Ir a Documentación</Button>
+                        <Button id={"button-info"} href={documentation}>Ir a Documentación
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                 className="ms-2 bi bi-box-arrow-up-right" viewBox="0 0 22 22">
+                                <path fillRule="event"
+                                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                                <path fillRule="event"
+                                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                            </svg>
+                        </Button>
                     </Row>
                 </Col>
             </Row>
 
 
             {feature&&
-                feature.length >= 1?
+            feature.length >= 1?
                 <Row className={"mt-5 card card-container"}>
                     <h3 id={"card_title"}>Caracteristicas:</h3>
                     <ul className="list-group list-group-numbered">
@@ -170,6 +209,7 @@ export const Project = ()=>{
                     </ul>
                 </Row>:false
             }
+
             {screenshot&&
                screenshot.length >= 1?
                 <Row className={"card  card-container mt-5"}>
