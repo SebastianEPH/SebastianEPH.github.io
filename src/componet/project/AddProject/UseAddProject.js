@@ -5,13 +5,13 @@ export const UseAddProject =(project_id)=>{
     const [project, setProject] = useState([])
     useEffect(async()=>{
         console.log("se está ejecutando")
-        await getProject(project_id)
+        await getProject()
     },[])
 
 
-    const getProject = async (id)=>  {
+    const getProject = async ()=>  {
         console.log('consultado API [proforma]')
-        await connectionAPI.get(`/my/project/${id}`)
+        await connectionAPI.get(`/my/project/${project_id}`)
             .then(({data})=>{
                 setProject(data)
             })

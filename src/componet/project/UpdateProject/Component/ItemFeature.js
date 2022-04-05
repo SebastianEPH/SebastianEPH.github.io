@@ -1,8 +1,10 @@
 import {Button, Col, Row} from "react-bootstrap";
 import {InputForm} from "../../../form/InputForm";
 import {UseFormUpdate} from "../UseFormUpdate";
+import {useParams} from "react-router-dom";
 export const ItemFeature =({feature:f,typeName,reloadForDB}) =>{
-    const {form, onChangeForm, clean, databaseAdd} = UseFormUpdate({}, typeName, reloadForDB)
+    const {project_id} = useParams();
+    const {form, onChangeForm, clean, databaseAdd} = UseFormUpdate({}, typeName, project_id ,reloadForDB)
     const {feature, img, description} = form
     return(
         <Row className={"mt-5 mb-5 card card-container"}>

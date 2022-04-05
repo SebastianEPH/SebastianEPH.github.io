@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import connectionAPI from "../../../axios";
 // import connectionAPI from "../../config/axios";
 
-export const UseFormUpdate= (initialState = {}, typeName='', reloadForDB  ) =>{
+export const UseFormUpdate= (initialState = {}, typeName='', project_id,reloadForDB  ) =>{
     const [form, setForm]  = useState(initialState);
 
     const onChangeForm = ({target}) => {
@@ -15,16 +15,19 @@ export const UseFormUpdate= (initialState = {}, typeName='', reloadForDB  ) =>{
     }
 
     const databaseAdd = async() =>{
-        await connectionAPI.post(`/my/proforma/:proforma_id/update/${typeName}/`,form)
+
+        console.log("esto es lo que se envia", {...form, project_id})
+        await connectionAPI.post(`/my/project/${project_id}/${typeName}/`,{...form})
                 .then((m)=>{
                     toast.success(m.data.message)
+                    reloadForDB()
                     clean(false) // clean  inputs
                 })
                 .catch((m)=>{
                     toast.error(m.response.data.message)
                 })
             // modalHandleClose()
-            reloadForDB()
+
     }
 
     // const updateHook= ({target}, name) =>{
@@ -84,15 +87,16 @@ export const UseFormUpdate= (initialState = {}, typeName='', reloadForDB  ) =>{
     const clean = (toast = true) =>{
         const newObj = {}
         Object.entries(form).forEach(([key, value]) => {
-            if(key === "project_id" || key === "id" ){
-                newObj[key] = value
-            }else{
-                newObj[key] = ''
-            }
+            // if(key === "project_id" || key === "id" ){
+            //     newObj[key] = value
+            // }else{
+            //
+            // }
+            newObj[key] = ''
         });
         setForm(newObj)
         console.log("clean ", form)
-        // if(toast){toast.success("Clean form ")}
+        if(toast){toast.success("Se limpió correctamente")}
     }
 
     return{

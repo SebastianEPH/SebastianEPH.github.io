@@ -14,10 +14,13 @@ export const UpdateProject =()=>{
     console.log(project, "esto era ")
     // const {form:form_screenshot,update:update_screenshot} = UseForm({}, '',getProject)
     console.log('esto es features')
+
     return(
         <Container>
             <Toaster />
             {project.feature&& <ItemFeature feature={project.feature} typeName={"feature"} reloadForDB={getProject}/>}
+
+
 
         </Container>
     )

@@ -21,7 +21,7 @@ function App_Routers() {
         <Routes>
             <Route path="/project/:project_id"  exact element={<Project/>}/>
             <Route path="/project/add/"  exact element={<AddProject/>}/>
-            <Route path="/project/update/:project_id"  exact element={<UpdateProject/>}/>
+            <Route path="/project/:project_id/advanced"  exact element={<UpdateProject/>}/>
             <Route path="/" exact element={
                 <div className="container-fluid">
                     <br/>
