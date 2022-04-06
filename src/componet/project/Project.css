@@ -34,12 +34,49 @@
 .img-icon{
     width: 60px;
 }
-/*.abs-center{ */
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    min-height: 100vh;*/
-/*}*/
+#border-item{
+    /*border-color: red;*/
+    /*color: red;*/
+    border-top-color: #4f4d4d;
+    border-bottom-color: #4f4d4d;
+}
+
+.button-item-small-red{
+
+    background-color: #f50000;
+    /*border-radius: 50px;*/
+
+}
+.button-item-small-red:hover{
+    color: #ffffff;
+    background-color:  #a12a2a;
+    /*border-radius: 50px;*/
+}
+.button-item-small-blue{
+    color: #000000;
+    background-color:#00cef5;
+    /*border-radius: 50px;*/
+
+}
+.button-item-small-blue:hover{
+    color: #ffffff;
+    background-color:  #2a8fa1;
+    /*border-radius: 50px;*/
+}
+.button-item-small-yellow{
+    color: #000000;
+    background-color: #e5f500;
+    /*border-radius: 50px;*/
+
+}
+.button-item-small-yellow:hover{
+    color: #ffffff;
+    background-color: #9da12a;
+    /*border-radius: 50px;*/
+}
+
+
+
 
 #screenshot-item{
     /*height: 100%;*/

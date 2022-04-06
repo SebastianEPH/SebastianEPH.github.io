@@ -11,13 +11,9 @@ export const UseFormUpdate= (initialState = {}, typeName='', project_id,reloadFo
     const onChangeForm = ({target}) => {
         setForm({...form, [target.name]: target.value})
         console.log(form)
-
     }
-
     const databaseAdd = async() =>{
-
-        console.log("esto es lo que se envia", {...form, project_id})
-        await connectionAPI.post(`/my/project/${project_id}/${typeName}/`,{...form})
+        await connectionAPI.post(`/my/project/${project_id}/${typeName}/`,form)
                 .then((m)=>{
                     toast.success(m.data.message)
                     reloadForDB()
@@ -27,8 +23,40 @@ export const UseFormUpdate= (initialState = {}, typeName='', project_id,reloadFo
                     toast.error(m.response.data.message)
                 })
             // modalHandleClose()
-
     }
+    const databaseUpdate = async() =>{
+        console.log("PUT ", {...form})
+        await connectionAPI.put(`/my/project/${project_id}/${typeName}`,form)
+            .then((m)=>{
+                toast.success(m.data.message)
+                reloadForDB()
+                clean(false, false) // clean  inputs
+            })
+            .catch((m)=>{
+                toast.error(m.response.data.message)
+            })
+        // modalHandleClose()
+    }
+    const databaseRemove= async(id, id_div) =>{
+        await connectionAPI.delete(`/my/project/${project_id}/${typeName}/${id}`)
+            .then((m)=>{
+                toast.success(m.data.message)
+                reloadForDB()
+            })
+            .catch((m)=>{
+                toast.error(m.response.data.message)
+            })
+    }
+
+    // const databaseUpdate= async () =>{
+    //     await  connectionAPI.put(`/proforma/${form.proforma_id}/${typeName}/${form.id}`,form)
+    //         .then((m)=>{
+    //             toast.success(m.data.message)
+    //         })
+    //         .catch((m)=>{
+    //             toast.error(m.response.data.message)
+    //         })
+    // }
 
     // const updateHook= ({target}, name) =>{
     //     let value2 = target.value
@@ -56,54 +84,40 @@ export const UseFormUpdate= (initialState = {}, typeName='', project_id,reloadFo
     //     modalHandleClose()
     //     reloadForDB()
     // }
-    // const databaseUpdate= async () =>{
-    //     await  connectionAPI.put(`/proforma/${form.proforma_id}/${typeName}/${form.id}`,form)
-    //         .then((m)=>{
-    //             toast.success(m.data.message)
-    //         })
-    //         .catch((m)=>{
-    //             toast.error(m.response.data.message)
-    //         })
-    // }
-    // const databaseRemove= async() =>{
-    //     await connectionAPI.delete(`/proforma/${form.proforma_id}/${typeName}/${form.id}`)
-    //         .then((m)=>{
-    //             toast.success(m.data.message)
-    //             const div = document.getElementById(typeName+'_'+form.id)
-    //             div.style.setProperty("display","none")
-    //             if(div !== null){
-    //                 while (div.hasChildNodes()){
-    //                     div.removeChild(div.lastChild);
-    //                 }
-    //             }else{
-    //                 console.log('No existe el modulo a eliminar ')
-    //             }
-    //         })
-    //         .catch((m)=>{
-    //             toast.error(m.response.data.message)
-    //         })
-    // }
 
-    const clean = (toast = true) =>{
+    // const div = document.getElementById(typeName+'_'+form.id)
+    // div.style.setProperty("display","none")
+    // if(div !== null){
+    //     while (div.hasChildNodes()){
+    //         div.removeChild(div.lastChild);
+    //     }
+    // }else{
+    //     console.log('No existe el modulo a eliminar ')
+    // }
+    //
+
+
+    const clean = (toast = true, id_ = true) =>{
         const newObj = {}
         Object.entries(form).forEach(([key, value]) => {
-            // if(key === "project_id" || key === "id" ){
-            //     newObj[key] = value
-            // }else{
-            //
-            // }
-            newObj[key] = ''
+            if(id_){
+                newObj[key] =  key === "id" ? newObj[key] = value:newObj[key] = ''
+            }
         });
+        // if(toast){toast.success("Se limpió correctamente")}
         setForm(newObj)
         console.log("clean ", form)
-        if(toast){toast.success("Se limpió correctamente")}
+
     }
 
     return{
         form,
         // databaseAddIf,databaseUpdate,databaseRemove,
         // updateHook,
+        setForm,
         onChangeForm,
+        databaseRemove,
+        databaseUpdate,
         databaseAdd,
         clean,
     };
