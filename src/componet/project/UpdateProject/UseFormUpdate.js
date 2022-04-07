@@ -12,6 +12,19 @@ export const UseFormUpdate= (initialState = {}, typeName='', project_id,reloadFo
         setForm({...form, [target.name]: target.value})
         console.log(form)
     }
+
+    const onChangeFormNum = ({target}) => {
+        if(!isNaN(target.value)){
+            // if(!target.value || target.value.isNaN){value1= 0}
+            setForm({...form,
+                [target.name]: target.value})
+        }else{
+            toast.error("Porfavor, solo numeros", {duration: 1000})
+        }
+        // setForm({...form, [target.name]: target.value})
+        console.log(form)
+    }
+
     const databaseAdd = async() =>{
         await connectionAPI.post(`/my/project/${project_id}/${typeName}/`,form)
                 .then((m)=>{
@@ -116,6 +129,7 @@ export const UseFormUpdate= (initialState = {}, typeName='', project_id,reloadFo
         // updateHook,
         setForm,
         onChangeForm,
+        onChangeFormNum,
         databaseRemove,
         databaseUpdate,
         databaseAdd,

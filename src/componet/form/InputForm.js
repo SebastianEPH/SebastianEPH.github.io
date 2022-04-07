@@ -1,5 +1,6 @@
 import {Col, FloatingLabel, Form} from "react-bootstrap";
 import "./form.css"
+
 export const InputForm =({data})=>{
     return(
         <Col md={data.col|| ""} className={data.class + " mb-3"}>
@@ -15,14 +16,14 @@ export const InputForm =({data})=>{
                                   onChange={(e)=>data.onChangeForm(e)}
                     />
                     :
-                     <Form.Control id={"input-form"}
-                                   name={data.name}
-                                   autoComplete={"off"}
-                                   type={data.type || "text"}
-                                   placeholder="on"
-                                   value={data.value || ""}
-                                   onChange={(e)=>data.onChangeForm(e)}
-                     />
+                    <Form.Control id={"input-form"}
+                                  name={data.name}
+                                  autoComplete={"off"}
+                                  type={"text"}
+                                  placeholder="on"
+                                  value={data.value || ""}
+                                  onChange={(e)=>data.onChangeForm(e)}
+                    />
                 }
                 </FloatingLabel>
         </Col>

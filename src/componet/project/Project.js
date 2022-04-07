@@ -4,6 +4,7 @@ import {Link, useParams} from "react-router-dom";
 import {ItemProject} from "./ItemProject";
 import "./Project.css"
 import {Button, Col, Container, Row} from "react-bootstrap";
+import {ItemFeature} from "./UpdateProject/Component/ItemFeature";
 export const Project = ()=>{
     const {project_id} = useParams();
     const {project, getProject} = UseProject([])
@@ -188,26 +189,12 @@ export const Project = ()=>{
                     </Row>
                 </Col>
             </Row>
-
-
-            {feature&&
-            feature.length >= 1?
-                <Row className={"mt-5 card card-container"}>
-                    <h3 id={"card_title"}>Caracteristicas:</h3>
-                    <ul className="list-group list-group-numbered">
-                        {feature.map((data, index)=>{
-                            return(
-                                <li className="list-group-item d-flex justify-content-between align-items-start">
-                                    <div className="ms-2 me-auto">
-                                        <div className="fw-bold">{data.feature}</div>
-                                        {data.description}
-                                    </div>
-                                    {/*<span className="badge bg-success rounded-pill text-black">En desarrollo</span>*/}
-                                </li>
-                            )})
-                        }
-                    </ul>
-                </Row>:false
+            { project.feature&& <ItemFeature
+                        feature={project.feature}
+                        typeName={"feature"}
+                        reloadForDB={getProject}
+                        onlyRead={true}
+                    />
             }
 
             {screenshot&&

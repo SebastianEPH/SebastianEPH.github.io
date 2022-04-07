@@ -3,6 +3,7 @@ import {Container} from "react-bootstrap";
 import {UseAddProject} from "../AddProject/UseAddProject";
 import {ItemFeature} from "./Component/ItemFeature";
 import toast, { Toaster } from 'react-hot-toast';
+import {ItemScreenshot} from "./Component/ItemScreenshot";
 
 export const UpdateProject =()=>{
     const {project_id} = useParams();
@@ -18,7 +19,18 @@ export const UpdateProject =()=>{
     return(
         <Container>
             <Toaster />
-            {project.feature&& <ItemFeature feature={project.feature} typeName={"feature"} reloadForDB={getProject}/>}
+            {project.feature && <ItemFeature
+                feature={project.feature}
+                typeName={"feature"}
+                reloadForDB={getProject}
+                onlyRead={false}
+            />}
+            {project.screenshot && <ItemScreenshot
+                screenshot={project.screenshot}
+                typeName={"screenshot"}
+                reloadForDB={getProject}
+                onlyRead={false}
+            />}
 
 
 
