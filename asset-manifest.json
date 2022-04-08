@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SebastianEPH/SebastianEPH.github.io/static/css/main.895ba545.css",
+    "main.js": "/SebastianEPH/SebastianEPH.github.io/static/js/main.c5fe2e4e.js",
+    "index.html": "/SebastianEPH/SebastianEPH.github.io/index.html",
+    "main.895ba545.css.map": "/SebastianEPH/SebastianEPH.github.io/static/css/main.895ba545.css.map",
+    "main.c5fe2e4e.js.map": "/SebastianEPH/SebastianEPH.github.io/static/js/main.c5fe2e4e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.895ba545.css",
+    "static/js/main.c5fe2e4e.js"
+  ]
+}
