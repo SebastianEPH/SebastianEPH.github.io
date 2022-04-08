@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SebastianEPH/SebastianEPH.github.io/static/css/main.895ba545.css",
-    "main.js": "/SebastianEPH/SebastianEPH.github.io/static/js/main.73a95281.js",
-    "index.html": "/SebastianEPH/SebastianEPH.github.io/index.html",
-    "main.895ba545.css.map": "/SebastianEPH/SebastianEPH.github.io/static/css/main.895ba545.css.map",
-    "main.73a95281.js.map": "/SebastianEPH/SebastianEPH.github.io/static/js/main.73a95281.js.map"
+    "main.css": "/static/css/main.895ba545.css",
+    "main.js": "/static/js/main.c5fe2e4e.js",
+    "index.html": "/index.html",
+    "main.895ba545.css.map": "/static/css/main.895ba545.css.map",
+    "main.c5fe2e4e.js.map": "/static/js/main.c5fe2e4e.js.map"
   },
   "entrypoints": [
     "static/css/main.895ba545.css",
-    "static/js/main.73a95281.js"
+    "static/js/main.c5fe2e4e.js"
   ]
 }
