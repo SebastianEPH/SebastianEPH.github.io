@@ -25,6 +25,11 @@
     fill: white;
     width:75px;
 }
+.form-select{
+    background-color: #353535;
+    color: white ;
+    border-color: #353535;
+}
 
 .img-project-container{
 

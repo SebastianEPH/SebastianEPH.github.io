@@ -17,7 +17,7 @@ export const ItemScreenshot =({screenshot:st,typeName,reloadForDB, onlyRead=true
     return(
         <Row className= {st.length < 1 && onlyRead?"":"mt-5 mb-5 card card-container"}>
         {st.length < 1 && onlyRead?false:<h3 id={"card_title"} >Capturas de pantalla:</h3>}
-        {st.length > 1?
+        {st.length >= 1?
             <ul className="list-group-item">
                 {st.map((data, index)=>{
                     return(

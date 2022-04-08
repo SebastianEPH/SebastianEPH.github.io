@@ -13,7 +13,7 @@ export const ItemFeature =({feature:f,typeName,reloadForDB, onlyRead=true}) =>{
     return(
         <Row className= {f.length < 1 && onlyRead?"":"mt-5 mb-5 card card-container"}>
             {f.length < 1 && onlyRead?false:<h3 id={"card_title"} >Caracteristicas:</h3>}
-            {f.length > 1?
+            {f.length >= 1?
                 <ul className="list-group list-group-item  ">
                     {f.map((data, index)=>{
 

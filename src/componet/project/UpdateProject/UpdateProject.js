@@ -2,7 +2,7 @@ import {useParams} from "react-router-dom";
 import {Container} from "react-bootstrap";
 import {UseAddProject} from "../AddProject/UseAddProject";
 import {ItemFeature} from "./ProjectComponents/ItemFeature";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import {ItemScreenshot} from "./ProjectComponents/ItemScreenshot";
 import {ItemLanguage} from "./ProjectComponents/ItemLanguage";
 

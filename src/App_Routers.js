@@ -1,4 +1,3 @@
-// import "./App_Router.css"
 import 'bootswatch/dist/cyborg/bootstrap.min.css'; // Added this :boom:
 import {
     BrowserRouter,
@@ -19,15 +18,11 @@ import {Footer} from "./componet/project/Footer";
 import {Navbar} from "./componet/project/Navbar";
 
 function App_Routers() {
-    const {projects,getMyData, myData} = UseProject([])
+    const {projects, myData} = UseProject([])
     console.log("projecto uno=> ", projects)
 
     return (
-
     <HashRouter>
-        {/*<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>*/}
-        {/*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>*/}
-        {/*<BrowserRouter>*/}
         <Navbar data={myData}/>
         <Routes>
             <Route path="/project/:project_id"  exact element={<Project/>}/>
