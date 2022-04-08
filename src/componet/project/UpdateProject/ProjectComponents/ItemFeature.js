@@ -93,6 +93,7 @@ export const ItemFeature =({feature:f,typeName,reloadForDB, onlyRead=true}) =>{
                             onChangeForm,
                             textarea:true
                         }}/>
+
                         <div className="btn-group" role="group" >
                             <Button id={"btn_feature_add"} type="button" onClick={databaseAdd} className={"btn btn-success me-3"}> Agregar </Button>
                             <Button id={"btn_feature_Update"} type="button" style={{"display":"none"}} onClick={()=>{
@@ -109,10 +110,6 @@ export const ItemFeature =({feature:f,typeName,reloadForDB, onlyRead=true}) =>{
                     </Row>
                 </>
             )}
-
-
         </Row>
-
-
     )
 }

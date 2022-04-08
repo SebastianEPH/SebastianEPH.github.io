@@ -4,8 +4,8 @@ import {Link, useParams} from "react-router-dom";
 import {ItemProject} from "./ItemProject";
 import "./Project.css"
 import {Button, Col, Container, Row} from "react-bootstrap";
-import {ItemFeature} from "./UpdateProject/Component/ItemFeature";
-import {ItemScreenshot} from "./UpdateProject/Component/ItemScreenshot";
+import {ItemFeature} from "./UpdateProject/ProjectComponents/ItemFeature";
+import {ItemScreenshot} from "./UpdateProject/ProjectComponents/ItemScreenshot";
 export const Project = ()=>{
     const {project_id} = useParams();
     const {project, getProject} = UseProject([])
@@ -224,7 +224,7 @@ export const Project = ()=>{
 
             <Row className={"mt-5 mb-4"}>
                 <Link to={"/"}   className={" btn button-back"}>
-                    Return Main
+                    Retornar el principio
                 </Link>
                 {/*<Button id={"button-info"} href={documentation}>Ir a Documentación</Button>*/}
 

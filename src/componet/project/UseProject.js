@@ -6,6 +6,7 @@ export const UseProject = (initialState = []) =>{
     const [project, setProject]  = useState(initialState);
     const [myData, setMyData]  = useState(initialState);
 
+
     useEffect(()=>{
         getProjects()
         getMyData()
@@ -28,10 +29,10 @@ export const UseProject = (initialState = []) =>{
         await connectionAPI.get(`/my/`)
             .then(({data})=>{
                 setMyData(data)
-                console.log("34223324234234342 ", data)
             })
             .catch((err)=>console.log("there was an Error getting the data ",err))
     }
+
 
     return{
         myData,

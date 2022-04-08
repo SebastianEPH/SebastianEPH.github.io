@@ -58,12 +58,14 @@ export const ListProject =({data})=>{
     return(
         <Container>
            <Row>
-              <h3 id={"card_title"} className={"text-center mt-4 mb-4"}>Proyectos nivel avanzado</h3>
+             <Container>
+                 <h3 id={"card_title"} className={"text-center mt-4 mb-4"}>Proyectos nivel avanzado</h3>
+             </Container>
                <Row className={"m-0 p-0  mb-4 "}>
                    <div className="btn-group " role="group" aria-label="Basic mixed styles example">
-                       <button id={"p_advanced"} onClick={ShowAdvanced} type="button" className={btnActive.btnActiveAdvanced?"btn btn-success":"btn  btn-danger"}>Ver proyectos avanzados</button>
-                       <button id={"p_medium"} onClick={ShowMedium} type="button" className={btnActive.btnActiveMedium?"btn btn-success":"btn btn-danger"}>Ver proyectos intermedios</button>
-                       <button id={"p_basic"} onClick={ShowBasic} type="button" className={ btnActive.btnActiveBasic?"btn btn-success":"btn btn-danger"}>Ver proyectos básicos</button>
+                       <button id={"p_advanced"} onClick={ShowAdvanced} type="button" className={btnActive.btnActiveAdvanced?"btn btn-success":"btn  btn-outline-warning"}>Ver proyectos avanzados</button>
+                       <button id={"p_medium"} onClick={ShowMedium} type="button" className={btnActive.btnActiveMedium?"btn btn-success":"btn btn-outline-warning"}>Ver proyectos intermedios</button>
+                       <button id={"p_basic"} onClick={ShowBasic} type="button" className={ btnActive.btnActiveBasic?"btn btn-success":"btn btn-outline-warning"}>Ver proyectos básicos</button>
                    </div>
                </Row>
                {projects.map(({id, name,range, data_init,range_id, data_finish, web_deploy, description,repository,
