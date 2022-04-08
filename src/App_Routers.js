@@ -10,9 +10,15 @@ import {Navbar} from "react-bootstrap";
 import {Project} from "./componet/project/Project";
 import {AddProject} from "./componet/project/AddProject/AddProject";
 import {UpdateProject} from "./componet/project/UpdateProject/UpdateProject";
+import {UseProject} from "./componet/project/UseProject";
+import {MyData} from "./componet/project/MyData";
 
 function App_Routers() {
-  return (
+    const {projects,getMyData, myData} = UseProject([])
+    console.log("projecto uno=> ", projects)
+
+    return (
+
     <HashRouter>
         {/*<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>*/}
         {/*<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>*/}
@@ -23,15 +29,15 @@ function App_Routers() {
             <Route path="/project/add/"  exact element={<AddProject/>}/>
             <Route path="/project/:project_id/advanced"  exact element={<UpdateProject/>}/>
             <Route path="/" exact element={
-                <div className="container-fluid">
-                    <br/>
-                    <p>Main </p>
+                <>
+                    <p>Main</p>
                     {/*<SearchProject/>*/}
                     {/*<br/>*/}
-                    <ListProject/>
+                    <MyData data={myData} />
+                    <ListProject data={projects}/>
                     {/*<ListProforma/>*/}
                     <br/>
-                </div>
+                </>
             }/>
             <Route path="/about" element={
                 <div className="container-fluid">

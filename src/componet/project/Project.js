@@ -5,6 +5,7 @@ import {ItemProject} from "./ItemProject";
 import "./Project.css"
 import {Button, Col, Container, Row} from "react-bootstrap";
 import {ItemFeature} from "./UpdateProject/Component/ItemFeature";
+import {ItemScreenshot} from "./UpdateProject/Component/ItemScreenshot";
 export const Project = ()=>{
     const {project_id} = useParams();
     const {project, getProject} = UseProject([])
@@ -196,24 +197,30 @@ export const Project = ()=>{
                         onlyRead={true}
                     />
             }
+            {project.screenshot && <ItemScreenshot
+                screenshot={project.screenshot}
+                typeName={"screenshot"}
+                reloadForDB={getProject}
+                onlyRead={true}
+            />}
 
-            {screenshot&&
-               screenshot.length >= 1?
-                <Row className={"card  card-container mt-5"}>
-                    <h3 id={"card_title"} >Screenshot:</h3>
-                    {screenshot.map((data, index)=>{
-                        return(
-                            <div className={"text-center"}>
-                                <br/><br/><br/>
-                                <span id={"screenshot-text"} >{data.details}</span>
-                                <br/>
-                                <img id={"screenshot-item"} className={"mt-5"} key={index+("-img")}  src={data.screenshot} alt={"screenshot"}/>
-                            </div>
-                        )})
-                    }
-                    <br/>
-                </Row>:false
-            }
+            {/*{screenshot&&*/}
+            {/*   screenshot.length >= 1?*/}
+            {/*    <Row className={"card  card-container mt-5"}>*/}
+            {/*        <h3 id={"card_title"} >Screenshot:</h3>*/}
+            {/*        {screenshot.map((data, index)=>{*/}
+            {/*            return(*/}
+            {/*                <div className={"text-center"}>*/}
+            {/*                    <br/><br/><br/>*/}
+            {/*                    <span id={"screenshot-text"} >{data.details}</span>*/}
+            {/*                    <br/>*/}
+            {/*                    <img id={"screenshot-item"} className={"mt-5"} key={index+("-img")}  src={data.screenshot} alt={"screenshot"}/>*/}
+            {/*                </div>*/}
+            {/*            )})*/}
+            {/*        }*/}
+            {/*        <br/>*/}
+            {/*    </Row>:false*/}
+            {/*}*/}
 
             <Row className={"mt-5 mb-4"}>
                 <Link to={"/"}   className={" btn button-back"}>

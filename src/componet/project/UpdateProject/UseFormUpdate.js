@@ -1,9 +1,6 @@
-//@ts-check
-import {useContext, useState} from "react";
-// import DollarContext from "./DollarContext";
+import {useState} from "react";
 import toast from 'react-hot-toast';
 import connectionAPI from "../../../axios";
-// import connectionAPI from "../../config/axios";
 
 export const UseFormUpdate= (initialState = {}, typeName='', project_id,reloadForDB  ) =>{
     const [form, setForm]  = useState(initialState);
