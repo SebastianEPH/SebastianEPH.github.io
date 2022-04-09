@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import {ItemProject} from "./ItemProject";
 import "./Project.css"
-import {Button, Col, Container, Row} from "react-bootstrap";
+import {Button, Col, Container, OverlayTrigger, Row, Tooltip} from "react-bootstrap";
 import {ItemFeature} from "./UpdateProject/ProjectComponents/ItemFeature";
 import {ItemScreenshot} from "./UpdateProject/ProjectComponents/ItemScreenshot";
 export const Project = ()=>{
@@ -15,8 +15,8 @@ export const Project = ()=>{
     },[])
     // si es undefined el id
 
-    const {id, person, name,version, type,architecture, state, size, platform, licence, ide,
-    note,description, tools, language,img, feature, screenshot, repository, documentation, web_deploy} = project
+    const {person, name,version, type,architecture, state, size, platform, licence, ide,
+    note,description, tools, language,img, repository, documentation, web_deploy} = project
     console.log(project)
     // const {name_short} = person
 
@@ -28,11 +28,24 @@ export const Project = ()=>{
                         <div className="p-2 bd-highlight"> </div>
                         <div className="p-2 bd-highlight"><h1 >{name}</h1></div>
                         <div className="p-2 bd-highlight box-img-icon d-flex justify-content-center  mt-5">
-                            {tools &&  tools.map((data, index)=> <img key={index+(data.tools)}  className={"img-icon"}  src={data.icon} alt={data.tools}/>)}
-                            {language &&  language.map((data, index)=><img key={index+(data.language)} className={"img-icon"}  src={data.icon} alt={data.language} />)}
+                            {tools &&  tools.map((data, index)=>
+
+                                <OverlayTrigger
+                                placement={'bottom'}
+                                overlay={<Tooltip >{data.tools}</Tooltip>}>
+                                    <img key={index+(data.tools)}  className={"img-icon"}  src={data.icon} alt={"icon-"+data.tools}/>
+                                </OverlayTrigger>)}
+                            )}
+                            {language &&  language.map((data, index)=>
+                                <OverlayTrigger
+                                    placement={'bottom'}
+                                    overlay={<Tooltip >{data.language}</Tooltip>}>
+                                    <img key={index+(data.language)} className={"img-icon"}  src={data.icon} alt={"icon-"+data.language} />
+                                </OverlayTrigger>)}
                         </div>
                     </div>
                 </div>
+
 
                 <Row id={"item-project"}>
                     {person&&
