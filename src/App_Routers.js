@@ -46,7 +46,6 @@ function App_Routers() {
             }/>
             <Route path="*" element={<h1>Error 404, el URL no existe </h1>}/>
         </Routes>
-        {/*</BrowserRouter>*/}
     </HashRouter>
   );
 }
