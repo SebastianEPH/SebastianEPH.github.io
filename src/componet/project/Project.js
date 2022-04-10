@@ -60,11 +60,7 @@ export const Project = ()=>{
 
             <div className={"d-flex justify-content-center"}>
 
-
-
-
                 <div id={"title-project"}>
-
 
                     <div className="d-flex flex-column bd-highlight mb-3">
                         <div className="p-2 bd-highlight"> </div>
