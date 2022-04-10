@@ -23,8 +23,6 @@ export const Project = ()=>{
     return(
         <Container>
             {/* page 404 si name no existe o no se encuentra  */}
-
-
                 <div className="row ">
                     <div className=" col-xl-4 text-center text-center-loading">
                         {name? <h1>{name}</h1>:<div className={"loader-t loader-length-95 loader-title"}> </div>}

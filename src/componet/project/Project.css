@@ -133,6 +133,12 @@
     align-items: center;
     justify-content: center;
 }
+.text-center-loading-vertical{
+    color: #000000;
+    margin: auto;
+    /*align-items: center;*/
+    justify-content: center;
+}
 
 #screenshot-item{
     /*height: 100%;*/

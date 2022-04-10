@@ -10,9 +10,7 @@ export const Contact = ({data}) =>{
                     <Row key={"contact_"+index} >
                         <div className="d-flex align-items-center justify-content-between px-4">
                             <div className="d-flex align-items-center">
-                                {/*<div className="mb-0" >*/}
                                 <img src={data.icon}  width={"40px"} alt={"img_"+data.web}/>
-                                {/*</div>*/}
                                 <div className="ms-4">
                                     <div className="small">{data.web}</div>
                                     <div className="text-muted">{data.link}</div>
