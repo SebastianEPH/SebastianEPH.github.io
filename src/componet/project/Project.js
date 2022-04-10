@@ -22,14 +22,55 @@ export const Project = ()=>{
 
     return(
         <Container>
+            <Row>
+                <Col>
+                    <Row>
+                        <Button className={"btn btn-danger"}>esto es un boton </Button>
+                    </Row>
+                </Col>
+                <Col>
+                    <Row>
+                        <Button className={"btn btn-danger"}>esto es un boton </Button>
+                    </Row>
+                </Col>
+                <Col>
+                    <Row>
+                        <Button className={"btn btn-danger"}>esto es un boton </Button>
+                    </Row>
+                </Col>
+            </Row>
+            <div className="container border border-success">
+
+                {/*<div className="row border border-warning">*/}
+                {/*    <div className="col-md-8 border border-danger">.col-md-8</div>*/}
+                {/*    <div className="col-6 col-md-4 border border-danger">.col-6 .col-md-4</div>*/}
+                {/*</div>*/}
+
+                <div className="row border border-warning">
+                    <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>
+                    <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>
+                    <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>
+                </div>
+
+                <div className="row border border-warning">
+                    <div className="col-4 col-xxl-4  border border-danger">.col-6</div>
+                    <div className="col-6 col-xxl-4  border border-danger">.col-6</div>
+                </div>
+            </div>
+
             <div className={"d-flex justify-content-center"}>
+
+
+
+
                 <div id={"title-project"}>
+
+
                     <div className="d-flex flex-column bd-highlight mb-3">
                         <div className="p-2 bd-highlight"> </div>
                         <div className="p-2 bd-highlight"><h1 >{name}</h1></div>
                         <div className="p-2 bd-highlight box-img-icon d-flex justify-content-center  mt-5">
                             {tools &&  tools.map((data, index)=>
-
                                 <OverlayTrigger
                                 placement={'bottom'}
                                 overlay={<Tooltip >{data.tools}</Tooltip>}>
