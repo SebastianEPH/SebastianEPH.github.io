@@ -6,7 +6,6 @@ export const UseProject = (initialState = []) =>{
     const [project, setProject]  = useState(initialState);
     const [myData, setMyData]  = useState(initialState);
 
-
     useEffect(()=>{
         getProjects()
         getMyData()
@@ -32,7 +31,6 @@ export const UseProject = (initialState = []) =>{
             })
             .catch((err)=>console.log("there was an Error getting the data ",err))
     }
-
 
     return{
         myData,
