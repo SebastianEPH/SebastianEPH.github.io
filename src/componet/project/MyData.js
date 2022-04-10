@@ -25,21 +25,17 @@ return(
 
                             <div className="row about-list">
                                 <div className="col-md-6">
-                                    <div className="media">
-                                        <label><b>Nombre</b></label>
-                                        <p className={"loader-t loader-length-80"}>{name}</p>
-                                    </div>
+                                    <label><b>Nombre completo</b></label>
+                                    {name? <p className={""}>{name}</p> : <div className={"loader-t loader-length-80"}> </div>}
 
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="media  ">
-                                        <label><b>Correo</b></label>
-                                        <p className={"loader-t loader-length-70"}>{email}</p>
-                                    </div>
+                                    <label><b>Correo</b></label>
+                                    {email? <p className={""}>{email}</p> : <div className={"loader-t loader-length-70"}> </div>}
 
                                 </div>
                                 <div className="col-md-6">
-                                    {languages&&
+                                    {languages?
                                         languages.map((data, index)=>{
                                             return(
                                                 <div key={index+"language"} className=" media">
@@ -48,7 +44,10 @@ return(
                                                 </div>
                                             )
                                         })
-
+                                    : <div>
+                                            <label><b>Idiomas</b></label>
+                                            <div className={"loader-t loader-length-80"}></div>
+                                        </div>
                                     }
 
                                     {/*<div className="media">*/}
