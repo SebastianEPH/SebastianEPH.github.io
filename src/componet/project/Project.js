@@ -39,24 +39,24 @@ export const Project = ()=>{
             {/*        </Row>*/}
             {/*    </Col>*/}
             {/*</Row>*/}
-            <div className="container border border-success">
+            {/*<div className="container border border-success">*/}
 
-                {/*<div className="row border border-warning">*/}
-                {/*    <div className="col-md-8 border border-danger">.col-md-8</div>*/}
-                {/*    <div className="col-6 col-md-4 border border-danger">.col-6 .col-md-4</div>*/}
-                {/*</div>*/}
+            {/*    /!*<div className="row border border-warning">*!/*/}
+            {/*    /!*    <div className="col-md-8 border border-danger">.col-md-8</div>*!/*/}
+            {/*    /!*    <div className="col-6 col-md-4 border border-danger">.col-6 .col-md-4</div>*!/*/}
+            {/*    /!*</div>*!/*/}
 
-                <div className="row border border-warning">
-                    <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>
-                    <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>
-                    <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>
-                </div>
+            {/*    <div className="row border border-warning">*/}
+            {/*        <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>*/}
+            {/*        <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>*/}
+            {/*        <div className="col-6 col-xl-4 border border-danger">.col-6 .col-md-4</div>*/}
+            {/*    </div>*/}
 
-                <div className="row border border-warning">
-                    <div className="col-4 col-xxl-4  border border-danger">.col-6</div>
-                    <div className="col-6 col-xxl-4  border border-danger">.col-6</div>
-                </div>
-            </div>
+            {/*    <div className="row border border-warning">*/}
+            {/*        <div className="col-4 col-xxl-4  border border-danger">.col-6</div>*/}
+            {/*        <div className="col-6 col-xxl-4  border border-danger">.col-6</div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
             <div className={"d-flex justify-content-center"}>
 
