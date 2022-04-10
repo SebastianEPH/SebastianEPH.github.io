@@ -1,4 +1,5 @@
 import {Container, Row} from "react-bootstrap";
+import {LoadingDada} from "./loadingDada";
 
 export const Contact = ({data}) =>{
     const { contact } = data
@@ -22,13 +23,7 @@ export const Contact = ({data}) =>{
                         </div>
                     </Row>
                 )
-                :
-                <div className={"text-center"}>Cargando datos...
-                    <br/>
-                    <div className="spinner-grow" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-                </div>
+                : <LoadingDada/>
             }
         </Container>
     )

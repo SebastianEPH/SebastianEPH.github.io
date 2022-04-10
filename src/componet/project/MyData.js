@@ -10,7 +10,7 @@ return(
                 {img?
                     <img src={img} className={"text-center-loading rounded-circle  my-main-img my-main-img-loading"}  alt="perfil-photo"/>
                     :
-                    <span className={"text-center-loading my-main-img my-main-img-loading"}>Cargando foto de perfil...</span>
+                    <span className={"loader text-center-loading my-main-img my-main-img-loading"}>Cargando foto de perfil...</span>
                 }
             </Col>
             <Col xl={7}>
