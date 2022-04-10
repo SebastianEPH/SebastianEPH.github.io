@@ -12,19 +12,29 @@ return(
                         <div className="about-text go-to ">
                             <h3 className="dark-color">Acerca de mi</h3>
                             <h6 className="theme-color lead">Programador Full Stack Junior </h6>
-                            <p>{details}</p>
+                            {details?
+                                <p>{details}</p>
+                            :
+                               <div className={"mt-2 mb-2"}>
+                                   <div className={"loader-t loader-length-95"}> </div>
+                                   <div className={"loader-t loader-length-80"}> </div>
+                                   <div className={"loader-t loader-length-90"}> </div>
+                                   <div className={"loader-t loader-length-50"}> </div>
+                               </div>
+                            }
+
                             <div className="row about-list">
                                 <div className="col-md-6">
                                     <div className="media">
                                         <label><b>Nombre</b></label>
-                                        <p>{name}</p>
+                                        <p className={"loader-t loader-length-80"}>{name}</p>
                                     </div>
 
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="media">
+                                    <div className="media  ">
                                         <label><b>Correo</b></label>
-                                        <p>{email}</p>
+                                        <p className={"loader-t loader-length-70"}>{email}</p>
                                     </div>
 
                                 </div>
@@ -32,12 +42,13 @@ return(
                                     {languages&&
                                         languages.map((data, index)=>{
                                             return(
-                                                <div key={index+"language"} className="media">
+                                                <div key={index+"language"} className=" media">
                                                     <label><b>{data.language}</b></label>
-                                                    <p>{data.dificulty}</p>
+                                                    <p className={"loader-text"} >{data.dificulty}</p>
                                                 </div>
                                             )
                                         })
+
                                     }
 
                                     {/*<div className="media">*/}
@@ -50,8 +61,27 @@ return(
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <img src={img} className={"border-secondary rounded-circle my-main-img"}  alt="perfil-photo"/>
+
+                        <div className={"my-main-img-loading loader "}>
+                            {img?
+                                <img src={img} className={"border-secondary rounded-circle my-main-img"}  alt="perfil-photo"/>
+                                :
+                                <span className={"text-center-loading"}>Cargando foto de perfil...</span>
+
+                            }
+
+                            {/*<img src="..." width="80px" height="80px"  className="my-main-img-loading rounded-circle border border-danger" alt="..."/>*/}
+                        </div>
+
+
+
+
                     </div>
+
+
+
+
+
                 </div>
             </div>
 

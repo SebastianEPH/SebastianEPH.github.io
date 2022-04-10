@@ -22,23 +22,23 @@ export const Project = ()=>{
 
     return(
         <Container>
-            <Row>
-                <Col>
-                    <Row>
-                        <Button className={"btn btn-danger"}>esto es un boton </Button>
-                    </Row>
-                </Col>
-                <Col>
-                    <Row>
-                        <Button className={"btn btn-danger"}>esto es un boton </Button>
-                    </Row>
-                </Col>
-                <Col>
-                    <Row>
-                        <Button className={"btn btn-danger"}>esto es un boton </Button>
-                    </Row>
-                </Col>
-            </Row>
+            {/*<Row>*/}
+            {/*    <Col>*/}
+            {/*        <Row>*/}
+            {/*            <Button className={"btn btn-danger"}>esto es un boton </Button>*/}
+            {/*        </Row>*/}
+            {/*    </Col>*/}
+            {/*    <Col>*/}
+            {/*        <Row>*/}
+            {/*            <Button className={"btn btn-danger"}>esto es un boton </Button>*/}
+            {/*        </Row>*/}
+            {/*    </Col>*/}
+            {/*    <Col>*/}
+            {/*        <Row>*/}
+            {/*            <Button className={"btn btn-danger"}>esto es un boton </Button>*/}
+            {/*        </Row>*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
             <div className="container border border-success">
 
                 {/*<div className="row border border-warning">*/}
