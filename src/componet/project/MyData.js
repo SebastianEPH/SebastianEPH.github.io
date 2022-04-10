@@ -4,16 +4,16 @@ export const MyData =({data})=> {
     const {name_short,email, name, languages ,details, img } = data
     console.log("oe oe oe", data)
 return(
-    <div className="container border border-success ">
+    <Container>
         <div className="row align-items-center flex-row-reverse my-main ">
-            <Col xl={5} className={"border border-danger p-4"}>
+            <Col xl={5} className={"p-4"}>
                 {img?
-                    <img src={img} className={"text-center-loading border-secondary rounded-circle  my-main-img my-main-img-loading"}  alt="perfil-photo"/>
+                    <img src={img} className={"text-center-loading rounded-circle  my-main-img my-main-img-loading"}  alt="perfil-photo"/>
                     :
                     <span className={"text-center-loading my-main-img my-main-img-loading"}>Cargando foto de perfil...</span>
                 }
             </Col>
-            <Col xl={7} className={"border border-danger"}>
+            <Col xl={7}>
                 <div className="about-text go-to ">
                     <h3 className="dark-color">Acerca de mi</h3>
                     <h6 className="theme-color lead">Programador Full Stack Junior </h6>
@@ -64,6 +64,6 @@ return(
                 </div>
             </Col>
         </div>
-    </div>
+    </Container>
 
 )}
