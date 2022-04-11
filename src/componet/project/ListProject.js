@@ -60,12 +60,14 @@ export const ListProject =({data})=>{
         <Container>
             <h3 id={"card_title"} className={"text-center mt-4 mb-4"}>Proyectos nivel avanzado</h3>
            <Row>
-                <Row className={"m-0 p-0  mb-4 "}>
-                    <div className="btn-group " role="group" aria-label="Basic mixed styles example">
-                        <button id={"p_advanced"} onClick={ShowAdvanced} type="button" className={btnActive.btnActiveAdvanced?"btn btn-success":"btn  btn-outline-warning"}>Ver proyectos avanzados</button>
-                        <button id={"p_medium"} onClick={ShowMedium} type="button" className={btnActive.btnActiveMedium?"btn btn-success":"btn btn-outline-warning"}>Ver proyectos intermedios</button>
-                        <button id={"p_basic"} onClick={ShowBasic} type="button" className={ btnActive.btnActiveBasic?"btn btn-success":"btn btn-outline-warning"}>Ver proyectos básicos</button>
+                <Row className={"m-0 5 p-0 mb-4 "}>
+                   {/*<Col =>*/}
+                    <div className="btn-group pe-5 ps-5 mt-3">
+                        <button id={"p_advanced"} onClick={ShowAdvanced} type="button" className={btnActive.btnActiveAdvanced?"button-left btn button-item-small-green":"button-left btn button-item-small-yellow-out"}>Ver proyectos avanzados</button>
+                        <button id={"p_medium"} onClick={ShowMedium} type="button" className={btnActive.btnActiveMedium?"btn button-item-small-green":"btn  button-item-small-yellow-out"}>Ver proyectos intermedios</button>
+                        <button id={"p_basic"} onClick={ShowBasic} type="button" className={ btnActive.btnActiveBasic?"button-rigth btn button-item-small-green":"button-rigth btn  button-item-small-yellow-out"}>Ver proyectos básicos</button>
                     </div>
+                   {/*</Col>*/}
                 </Row>
                 {projects.length === 0
                     ?[1,2,3,4,5,6].map((data, index)=>

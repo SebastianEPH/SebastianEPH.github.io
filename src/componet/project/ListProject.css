@@ -43,9 +43,7 @@ a:link, a:visited,  a:hover, a:active
     border:  #2dce22 1px solid;
 
 }
-.button-green{
-    background-color: #2dce22;
-}
+
 .center-center{
     justify-content: center;
     margin: auto;
