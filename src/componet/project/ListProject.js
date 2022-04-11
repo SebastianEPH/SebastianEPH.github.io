@@ -105,36 +105,38 @@ export const ListProject =({data})=>{
                 :
                     projects.map(({id, name,range, data_init,range_id, data_finish, web_deploy, description,repository, short_details, documentation,type, img,tools, language}, index)=>
                         <Col lg={6} key={index+ rand +id} className={"p-2 center-center"} style={range_id === 3? {}: {"display":"none"}} name={"range"+range_id}>
-                            <div className={"card-list-project-item"}>
-                                <OverlayTrigger placement={'bottom'} overlay={<Tooltip>{data_finish || "Aun en desarrollo"}</Tooltip>}>
-                                    <Row className={"m-0 pt-2 card-list-title"}>
-                                        <Col sm={5}>
-                                            <h6 id={"title"} className=" mt-0">{type}</h6>
-                                        </Col>
-                                        <Col sm={7} className={"float-end"}>
-                                            <div className={"float-end"}>
-                                                <h6 id={"title"}  className="mt-0">{range? 'Nivel '+ range : ""}</h6>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </OverlayTrigger>
-                                <Row className="card-body">
-                                    <h4>{name}</h4>
-                                    <p className="project-details">{short_details}</p>
-                                </Row>
-                                <Link to={"/project/"+id}>
-                                    <div className={"ps-3 pe-3 pb-2"}>
-                                        <OverlayTrigger placement={'bottom'} overlay={<Tooltip >Click para ver detalles</Tooltip>}>
-                                            <Row className={"custom-button"}>
-                                                <Col sm={12}>
-                                                    {tools &&  tools.map((data, index)=> <img key={"img_"+index+"_tools"} style={{width: "40px"}}  src={data.icon} alt={data.tools}/>)}
-                                                    {language && language.map((data, index)=><img key={"img_"+index+"_language"} style={{width: "40px"}}  src={data.icon} alt={data.language} />)}
-                                                </Col>
-                                            </Row>
-                                        </OverlayTrigger>
-                                    </div>
-                                </Link>
-                            </div>
+                           <Link to={"/project/"+id} >
+                               <div className={"card-list-project-item"}>
+                                   <OverlayTrigger placement={'bottom'} overlay={<Tooltip>{data_finish || "Aun en desarrollo"}</Tooltip>}>
+                                       <Row className={"m-0 pt-2 card-list-title"}>
+                                           <Col sm={5}>
+                                               <h6 id={"title"} className=" mt-0">{type}</h6>
+                                           </Col>
+                                           <Col sm={7} className={"float-end"}>
+                                               <div className={"float-end"}>
+                                                   <h6 id={"title"}  className="mt-0">{range? 'Nivel '+ range : ""}</h6>
+                                               </div>
+                                           </Col>
+                                       </Row>
+                                   </OverlayTrigger>
+                                   <Row className="card-body">
+                                       <h4>{name}</h4>
+                                       <p className="project-details clear-link">{short_details}</p>
+                                   </Row>
+                                   {/*<Link to={"/project/"+id}>*/}
+                                   <div className={"ps-3 pe-3 pb-2"}>
+                                       <OverlayTrigger placement={'bottom'} overlay={<Tooltip >Click para ver detalles</Tooltip>}>
+                                           <Row className={"custom-button"}>
+                                               <Col sm={12}>
+                                                   {tools &&  tools.map((data, index)=> <img key={"img_"+index+"_tools"} style={{width: "40px"}}  src={data.icon} alt={data.tools}/>)}
+                                                   {language && language.map((data, index)=><img key={"img_"+index+"_language"} style={{width: "40px"}}  src={data.icon} alt={data.language} />)}
+                                               </Col>
+                                           </Row>
+                                       </OverlayTrigger>
+                                   </div>
+                                   {/*</Link>*/}
+                               </div>
+                           </Link>
                         </Col>
                     )
 
