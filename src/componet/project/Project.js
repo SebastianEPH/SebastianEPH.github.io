@@ -142,28 +142,24 @@ export const Project = ()=>{
                 </Col>
             </div>
 
-            <div className={"d-flex justify-content-center"}>
-                <div id={"title-project"}>
-                    <div className="d-flex flex-column bd-highlight mb-3">
-                        <div className="p-2 bd-highlight box-img-icon d-flex justify-content-center  mt-5">
-                            {tools &&  tools.map((data, index)=>
-                                <OverlayTrigger key={"tools_icons_"+data.id}
-                                                placement={'bottom'}
-                                                overlay={<Tooltip >{data.tools}</Tooltip>}>
-                                    <img key={index+"_"+data.tools}  className={"img-icon"}  src={data.icon} alt={"icon-"+data.tools}/>
-                                </OverlayTrigger>)
-                            }
-                            {language &&  language.map((data, index)=>
-                                <OverlayTrigger key={"language_icon_"+data.id}
-                                                placement={'bottom'}
-                                                overlay={<Tooltip >{data.language}</Tooltip>}>
-                                    <img key={index+"_"+data.language} className={"img-icon"}  src={data.icon} alt={"icon-"+data.language} />
-                                </OverlayTrigger>)
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Row className={"custom-button ps-3 pe-3 pb-2 pt-5"}>
+                <Col sm={12}>
+                    {tools &&  tools.map((data, index)=>
+                        <OverlayTrigger key={"tools_icons_"+data.id}
+                                        placement={'bottom'}
+                                        overlay={<Tooltip >{data.tools}</Tooltip>}>
+                            <img key={index+"_"+data.tools}  className={"img-icon"}  src={data.icon} alt={"icon-"+data.tools}/>
+                        </OverlayTrigger>)
+                    }
+                    {language &&  language.map((data, index)=>
+                        <OverlayTrigger key={"language_icon_"+data.id}
+                                        placement={'bottom'}
+                                        overlay={<Tooltip >{data.language}</Tooltip>}>
+                            <img key={index+"_"+data.language} className={"img-icon"}  src={data.icon} alt={"icon-"+data.language} />
+                        </OverlayTrigger>)
+                    }
+                </Col>
+            </Row>
 
             {note
                 ?note.length >= 1 &&

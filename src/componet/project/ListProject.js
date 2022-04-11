@@ -125,7 +125,6 @@ export const ListProject =({data})=>{
                                        <h4>{name}</h4>
                                        <p className="project-details clear-link">{short_details}</p>
                                    </Row>
-                                   {/*<Link to={"/project/"+id}>*/}
                                    <div className={"ps-3 pe-3 pb-2"}>
                                        <OverlayTrigger placement={'bottom'} overlay={<Tooltip >Click para ver detalles</Tooltip>}>
                                            <Row className={"custom-button"}>
@@ -136,7 +135,6 @@ export const ListProject =({data})=>{
                                            </Row>
                                        </OverlayTrigger>
                                    </div>
-                                   {/*</Link>*/}
                                </div>
                            </Link>
                         </Col>
