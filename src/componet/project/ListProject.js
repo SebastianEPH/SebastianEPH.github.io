@@ -1,6 +1,7 @@
 import "./ListProject.css"
 import {Col, Container, OverlayTrigger, Row, Tooltip} from "react-bootstrap";
 import {useState} from "react";
+import {Link} from "react-router-dom";
 export const ListProject =({data})=>{
     const projects = data
     const rand =()=>{
@@ -121,16 +122,18 @@ export const ListProject =({data})=>{
                                     <h4>{name}</h4>
                                     <p className="project-details">{short_details}</p>
                                 </Row>
-                                <div className={"ps-3 pe-3 pb-2"}>
-                                    <OverlayTrigger placement={'bottom'} overlay={<Tooltip >Click para ver detalles</Tooltip>}>
-                                        <Row className={"custom-button"}>
-                                            <Col sm={12}>
-                                                {tools &&  tools.map((data, index)=> <img key={"img_"+index+"_tools"} style={{width: "40px"}}  src={data.icon} alt={data.tools}/>)}
-                                                {language && language.map((data, index)=><img key={"img_"+index+"_language"} style={{width: "40px"}}  src={data.icon} alt={data.language} />)}
-                                            </Col>
-                                        </Row>
-                                    </OverlayTrigger>
-                                </div>
+                                <Link to={"/project/"+id}>
+                                    <div className={"ps-3 pe-3 pb-2"}>
+                                        <OverlayTrigger placement={'bottom'} overlay={<Tooltip >Click para ver detalles</Tooltip>}>
+                                            <Row className={"custom-button"}>
+                                                <Col sm={12}>
+                                                    {tools &&  tools.map((data, index)=> <img key={"img_"+index+"_tools"} style={{width: "40px"}}  src={data.icon} alt={data.tools}/>)}
+                                                    {language && language.map((data, index)=><img key={"img_"+index+"_language"} style={{width: "40px"}}  src={data.icon} alt={data.language} />)}
+                                                </Col>
+                                            </Row>
+                                        </OverlayTrigger>
+                                    </div>
+                                </Link>
                             </div>
                         </Col>
                     )
