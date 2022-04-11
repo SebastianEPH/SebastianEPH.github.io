@@ -5,7 +5,7 @@ export const MyData =({data})=> {
     console.log("oe oe oe", data)
 return(
     <Container>
-        <div className="row align-items-center flex-row-reverse my-main ">
+        <Row className="align-items-center flex-row-reverse my-main ">
             <Col xl={5} className={"p-4"}>
                 {img?
                     <img src={img} className={"text-center-loading rounded-circle  my-main-img my-main-img-loading"}  alt="perfil-photo"/>
@@ -63,7 +63,7 @@ return(
                     </div>
                 </div>
             </Col>
-        </div>
+        </Row>
     </Container>
 
 )}

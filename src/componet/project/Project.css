@@ -104,12 +104,9 @@
 .button-item-small-yellow:hover{
     color: #ffffff;
     background-color: #9da12a;
-    /*border-radius: 50px;*/
 }
 
 .my-main-img{
-    /*min-width: 400px;*/
-    /*min-height: 400px;*/
     width: 400px;
     height: 400px;
     max-height: 400px;
@@ -258,9 +255,6 @@
 .loader-length-100{
     width: 100%;
 }
-
-
-
 
 @keyframes loading-animation {
     0%{

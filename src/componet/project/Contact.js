@@ -14,11 +14,11 @@ export const Contact = ({data}) =>{
                                 <img src={data.icon}  width={"40px"} alt={"img_"+data.web}/>
                                 <div className="ms-4">
                                     <div className="small">{data.web}</div>
-                                    <div className="text-muted">{data.link}</div>
+                                    <div className="text-muted cursor-link">{data.link}</div>
                                 </div>
                             </div>
-                            <div className="small">
-                                <span onClick={()=>{window.location.href = data.link}} className="badge rounded-pill fw-light button-item-small-green">Visitar</span>
+                            <div style={{"cursor":"pointer"}}>
+                                <span onClick={()=>{window.location.href = data.link}} className="badge rounded-pill fw-light button-item-small-green ">Visitar</span>
                             </div>
                         </div>
                     </Row>
