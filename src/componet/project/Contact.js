@@ -18,7 +18,8 @@ export const Contact = ({data}) =>{
                                 </div>
                             </div>
                             <div style={{"cursor":"pointer"}}>
-                                <span onClick={()=>{window.location.href = data.link}} className="badge rounded-pill fw-light button-item-small-green ">Visitar</span>
+                                <span onClick={()=>{window.open(data.link, '_blank');}
+                                } className="badge rounded-pill fw-light button-item-small-green ">Visitar</span>
                             </div>
                         </div>
                     </Row>
