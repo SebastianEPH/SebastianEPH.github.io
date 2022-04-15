@@ -9,7 +9,7 @@ export const ProgrammingLanguage = ({data})=>{
                 <Row className={"text-center-loading-vertical"}>
                     {programming_language?
                         programming_language.map(({icon,dificulty, language}, index)=>
-                            <Col sm={3} key={"programming_language_"+ index} className={"mb-3 mt-2"}>
+                            <Col key={"programming_language_"+ index} className={"mb-3 mt-2"}>
                                 <Row>
                                     <div className=" text-center">
                                         <span className="m-0px font-w-600 text-white ">{dificulty}</span>

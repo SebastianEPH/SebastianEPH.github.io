@@ -6,11 +6,11 @@ export const ExtraKnowledge = ({data}) =>{
     return(
 
         <Container>
-            <h3  className={"title-h1 text-center mt-5 mb-3"}>Herramientas y librerías de proyectos</h3>
+            <h3  className={"title-h1 text-center mt-5 mb-3"}>Conocimientos en otras áreas</h3>
             <Row className={"text-center-loading-vertical"}>
                 {extra_knowledge?
                     extra_knowledge.map(({icon,dificulty, knowlegge}, index)=>
-                        <Col sm={3} key={"programming_language_"+ index} className={"mb-3 mt-2"}>
+                        <Col key={"programming_language_"+ index} className={"mb-3 mt-2"}>
                             <Row>
                                 <div className=" text-center">
                                     <span className="m-0px font-w-600 text-white ">{dificulty}</span>
