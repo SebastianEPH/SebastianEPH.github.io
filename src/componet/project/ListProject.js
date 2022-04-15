@@ -2,6 +2,7 @@ import "./ListProject.css"
 import {Col, Container, OverlayTrigger, Row, Tooltip} from "react-bootstrap";
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import helpers from "../../helpers/helpers";
 export const ListProject =({data})=>{
     const projects = data
     const rand =()=>{
@@ -105,22 +106,25 @@ export const ListProject =({data})=>{
                         </Col>
                     )
                 :
-                    projects.map(({id, name,range, data_init,range_id, data_finish, web_deploy, description,repository, short_details, documentation,type, img,tools, language}, index)=>
+                    projects.map(({id, name,range, data_init,range_id, date_finish, web_deploy, description,repository, short_details, documentation,type, img,tools, language}, index)=>
                         <Col lg={6} key={index+ rand +id} className={"p-2 center-center"} style={range_id === 3? {}: {"display":"none"}} name={"range"+range_id}>
                            <Link to={"/project/"+id} >
                                <div className={"card-list-project-item"}>
-                                   <OverlayTrigger placement={'bottom'} overlay={<Tooltip>{data_finish || "Aun en desarrollo"}</Tooltip>}>
+                                   {/*<OverlayTrigger placement={'bottom'} overlay={<Tooltip></Tooltip>}>*/}
                                        <Row className={"m-0 pt-2 card-list-title"}>
-                                           <Col sm={5}>
+                                           <Col sm={4}>
                                                <h6 id={"title"} className=" mt-0">{type}</h6>
                                            </Col>
-                                           <Col sm={7} className={"float-end"}>
+                                           <Col sm={4}>
+                                               <h6 id={"title"} className="text-center mt-0">{ date_finish? ("Terminado "+helpers.timeago(date_finish)) : "Aun en desarrollo"}</h6>
+                                           </Col>
+                                           <Col sm={4} className={"float-end"}>
                                                <div className={"float-end"}>
                                                    <h6 id={"title"}  className="mt-0">{range? 'Nivel '+ range : ""}</h6>
                                                </div>
                                            </Col>
                                        </Row>
-                                   </OverlayTrigger>
+                                   {/*</OverlayTrigger>*/}
                                    <Row className="card-body">
                                        <h4>{name}</h4>
                                        <p className="project-details clear-link">{short_details}</p>
