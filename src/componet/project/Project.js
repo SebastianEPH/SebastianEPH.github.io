@@ -1,34 +1,57 @@
-import {UseProject} from "./UseProject";
+import {UseProjects} from "../../Use/UseProjects";
 import {useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
-import {ItemProject} from "./ItemProject";
+import {ItemProject} from "../items/ItemProject";
 import "./Project.css"
 import { Col, Container, OverlayTrigger, Row, Tooltip} from "react-bootstrap";
-import {ItemFeature} from "./UpdateProject/ProjectComponents/ItemFeature";
-import {ItemScreenshot} from "./UpdateProject/ProjectComponents/ItemScreenshot";
-import {ItemProjectLoader} from "./ItemProjectLoader";
+import {ItemFeature} from "./UpdateProject/items/ItemFeature";
+import {ItemScreenshot} from "./UpdateProject/items/ItemScreenshot";
+import {ItemProjectLoader} from "../ItemProjectLoader";
 import {TitleLoader} from "./UpdateProject/Loader/TitleLoader";
+import {ItemLanguage} from "./UpdateProject/items/ItemLanguage";
+
 export const Project = ()=>{
-    const {project_id} = useParams();
-    const {project, getProject} = UseProject([])
+    const {projects_id} = useParams();
+    const {project, getProject} = UseProjects([])
 
     useEffect(()=>{
-        getProject(project_id)
+        getProject(projects_id);
     },[])
-    // si es undefined el id
 
-    const {person, name,version, type,architecture, state, size, platform, licence, ide,
-    note,description, tools, language,img, repository, documentation, web_deploy} = project
-    console.log(project)
+    const {
+        person,
+        name,
+        date_init,
+        date_finish,
+        web_deploy,
+        short_description,
+        description,
+        repository,
+        documentation,
+        type,
+        version,
+        architecture,
+        state,
+        size,
+        platform,
+        licence,
+        ide,
+        range,
+        tools ,
+        languages,
+        img,
+        note,
+        screenshots,features // objects
+    } = project
     // {/* page 404 si name no existe o no se encuentra  */}
 
-    console.log("esto es project ",project)
+    console.log("esto es project 123",project, projects_id)
 
     return(
         <Container>
             <div className="row ">
                 <Col xl={4} className="text-center text-center-loading pt-2 pb-4">
-                    {name? <h1>{name}</h1>:<div className={"  loader-t loader-title loader-length-100"}> </div>}
+                    {name? <h1>{name}</h1>:<div className={"loader-t loader-title loader-length-100"}> </div>}
                 </Col>
                 <Col xl={8}>
                     <Row>
@@ -151,7 +174,7 @@ export const Project = ()=>{
                             <img key={index+"_"+data.tools}  className={"img-icon"}  src={data.icon} alt={"icon-"+data.tools}/>
                         </OverlayTrigger>)
                     }
-                    {language &&  language.map((data, index)=>
+                    {languages &&  languages.map((data, index)=>
                         <OverlayTrigger key={"language_icon_"+data.id}
                                         placement={'bottom'}
                                         overlay={<Tooltip >{data.language}</Tooltip>}>
@@ -181,11 +204,9 @@ export const Project = ()=>{
             }
 
             {img ?
-                <Row className={"mt-5 card card-container"}>
+                <Row className={"mt-5 card card-container "}>
                     <h3 id={"card_title"}>Imagen:</h3>
-                    <ul className="list-group list-group-numbered">
-                        <img  id={"screenshot-item"} className={"mt-3"}   src={img} alt="imagen web"/>
-                    </ul>
+                        <img  id={"screenshot-item"} className={"mt-3 mb-3"}   src={img} alt="imagen web"/>
                 </Row>
                 :
                  name && !img ?  <></> :<TitleLoader/>
@@ -242,18 +263,18 @@ export const Project = ()=>{
                 </Col>
             </Row>
 
-            {project.feature&&
+            {features&&
                 <ItemFeature
-                        feature={project.feature}
-                        typeName={"feature"}
+                        features={features}
+                        typeName={"features"}
                         reloadForDB={getProject}
                         onlyRead={true}
                 />
             }
-            {project.screenshot &&
+            {screenshots &&
                 <ItemScreenshot
-                    screenshot={project.screenshot}
-                    typeName={"screenshot"}
+                    screenshots={screenshots}
+                    typeName={"screenshots"}
                     reloadForDB={getProject}
                     onlyRead={true}
                 />

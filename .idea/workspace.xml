@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="84a6a3b2-02e3-49b4-b246-e97a10f216ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Use/UseForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseMyEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseMyExtraKnowledge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseMyLanguages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseMyPhones.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseMyProgrammingLanguages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseMyProgrammingTools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseMySocialNetworks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Use/UseProjects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componet/Main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componet/items/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componet/project/CardProject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componet/project/CardProjectLoading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componet/project/UpdateProject/items/ItemScreenshot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api-giphy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App_Routers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App_Routers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/AddProject/AddProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/project/Add/AddProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/AddProject/UseAddProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/project/Add/UseAddProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/SocialNetworks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/ExtraKnowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/ExtraKnowledge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/ItemProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/items/ItemProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/ItemProjectLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/ItemProjectLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/ListProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/project/ListProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/ModalCreateNew.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/MyData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/MyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/items/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/ProgrammingLanguage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/ProgrammingLanguage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/project/Project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/ProgrammingTools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/UpdateProject/ProjectComponents/ItemFeature.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/project/UpdateProject/items/ItemFeature.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/UpdateProject/ProjectComponents/ItemLanguage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/project/UpdateProject/items/ItemLanguage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/UpdateProject/ProjectComponents/ItemScreenshot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/UpdateProject/UpdateProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/project/UpdateProject/UpdateProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/UpdateProject/UseFormUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Use/UseFormCRUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/UseForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/UseProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Use/UseMyData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/componet/project/loadingDada.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/componet/loading/loadingDada.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/helpers.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Bun014UEO6ZmhbQlW0gcvTWTP5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/SoftwareProjects/React/SebastianEPH.github.io",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SoftwareProjects\React\SebastianEPH.github.io\src\Use" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftwareProjects\React\SebastianEPH.github.io\src\componet\items" />
+      <recent name="D:\SoftwareProjects\React\SebastianEPH.github.io\src\componet" />
+      <recent name="D:\SoftwareProjects\React\SebastianEPH.github.io\src\Use" />
+      <recent name="D:\SoftwareProjects\React\SebastianEPH.github.io\src\componet\programming-languages" />
+      <recent name="D:\SoftwareProjects\React\SebastianEPH.github.io\src\componet\web" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84a6a3b2-02e3-49b4-b246-e97a10f216ab" name="Changes" comment="" />
+      <created>1657764610217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657764610217</updated>
+      <workItem from="1657764611722" duration="10078000" />
+      <workItem from="1657781237427" duration="5082000" />
+      <workItem from="1657834608086" duration="9967000" />
+      <workItem from="1657846843790" duration="256000" />
+      <workItem from="1657848599439" duration="830000" />
+      <workItem from="1657852010044" duration="2206000" />
+      <workItem from="1657855599960" duration="2656000" />
+      <workItem from="1657858395051" duration="104000" />
+      <workItem from="1657858661079" duration="650000" />
+      <workItem from="1657935260654" duration="2000" />
+      <workItem from="1668988133854" duration="147000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,13 +1,21 @@
 import {Container, Row} from "react-bootstrap";
-import {LoadingDada} from "./loadingDada";
+import {LoadingDada} from "./loading/loadingDada";
+// import {useEffect} from "react";
+// import {UseMySocialNetworks} from "../Use/UseMySocialNetworks";
 
-export const Contact = ({data}) =>{
-    const { contact } = data
+export const SocialNetworks = ({data}) =>{
+
+    // const {mySocialNetworks, getMySocialNetworks } = UseMySocialNetworks([]);
+    //
+    // useEffect(()=>{
+    //     getMySocialNetworks();
+    // },[])
+    const mySocialNetworks = data;
     return(
         <Container>
             <h3 className={"title-h1 text-center mt-5 xxl-3"}>Contacto</h3>
-            {contact?
-                contact.map((data, index)=>
+            {mySocialNetworks?
+                mySocialNetworks.map((data, index)=>
                     <Row key={"contact_"+index} >
                         <div className="d-flex align-items-center justify-content-between px-4">
                             <div className="d-flex align-items-center">

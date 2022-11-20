@@ -1,15 +1,16 @@
-import {Button, Col, Row} from "react-bootstrap";
+import {Button, Row} from "react-bootstrap";
 import {InputForm} from "../../../form/InputForm";
-import {UseFormUpdate} from "../UseFormUpdate";
+import {UseFormCRUD} from "../../../../Use/UseFormCRUD";
 import {useParams} from "react-router-dom";
 
-export const ItemFeature =({feature:f,typeName,reloadForDB, onlyRead=true}) =>{
-    const {project_id} = useParams();
+export const ItemFeature =({features:f,typeName,reloadForDB, onlyRead=true}) =>{
+    const {projects_id} = useParams();
     const {form, setForm, onChangeForm, clean, databaseAdd, databaseRemove, databaseUpdate}
-        = UseFormUpdate({}, typeName, project_id ,reloadForDB)
+        = UseFormCRUD({}, typeName, projects_id ,reloadForDB)
 
     const {feature, img, description} = form
-
+    console.log('typename=>', typeName)
+    console.log("esto es feature ",f)
     return(
         <Row className= {f.length < 1 && onlyRead?"":"mt-5 mb-5 card card-container"}>
             {f.length < 1 && onlyRead?false:<h3 id={"card_title"} >Caracteristicas:</h3>}

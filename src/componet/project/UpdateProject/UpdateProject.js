@@ -1,48 +1,47 @@
-import {useParams} from "react-router-dom";
-import {Container} from "react-bootstrap";
-import {UseAddProject} from "../AddProject/UseAddProject";
-import {ItemFeature} from "./ProjectComponents/ItemFeature";
-import { Toaster } from 'react-hot-toast';
-import {ItemScreenshot} from "./ProjectComponents/ItemScreenshot";
-import {ItemLanguage} from "./ProjectComponents/ItemLanguage";
-
-export const UpdateProject =()=>{
-    const {project_id} = useParams();
-    console.log("El ID es ", project_id)
-
-    // function para verificar si el IDes letra y redireccionar al centro 404 ,
-
-    const {project, getProject} = UseAddProject(project_id)
-    console.log(project, "esto era ")
-    // const {form:form_screenshot,update:update_screenshot} = UseForm({}, '',getProject)
-    console.log('esto es features')
-
-    return(
-        <Container>
-            <Toaster />
-            {project.language && <ItemLanguage
-                language={project.language}
-                tools={project.tools}
-                reloadForDB={getProject}
-                onlyRead={false}
-            />}
-
-
-            {project.feature && <ItemFeature
-                feature={project.feature}
-                typeName={"feature"}
-                reloadForDB={getProject}
-                onlyRead={false}
-            />}
-            {project.screenshot && <ItemScreenshot
-                screenshot={project.screenshot}
-                typeName={"screenshot"}
-                reloadForDB={getProject}
-                onlyRead={false}
-            />}
-
-
-
-        </Container>
-    )
-}
+// import {useParams} from "react-router-dom";
+// import {Container} from "react-bootstrap";
+// // import {ItemFeature} from "./items/ItemFeature";
+// import { Toaster } from 'react-hot-toast';
+// // import {ItemScreenshot} from "./items/ItemScreenshot";
+// import {ItemLanguage} from "./items/ItemLanguage";
+// import {UseProjects} from "../../../Use/UseProjects";
+// import {useEffect} from "react";
+//
+// export const UpdateProject =()=>{
+//     const {projects_id} = useParams();
+//     const {project, getProject} = UseProjects([])
+//
+//     useEffect(()=>{
+//         getProject(projects_id);
+//     },[])
+//
+//     return(
+//         <Container>
+//             <Toaster />
+//             {project.languages &&
+//                 <ItemLanguage />
+//             }
+//             <div>
+//                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, consectetur cum dicta dolorem dolores exercitationem illum inventore iste mollitia necessitatibus pariatur provident quam quibusdam recusandae reprehenderit repudiandae, rerum temporibus vitae?
+//             </div>
+//
+//             {/*{project.features &&*/}
+//             {/*    <ItemFeature*/}
+//             {/*        features={project.features}*/}
+//             {/*        typeName={"features"}*/}
+//             {/*        reloadForDB={getProject}*/}
+//             {/*        onlyRead={false}*/}
+//             {/*    />*/}
+//             {/*}*/}
+//             {/*{project.screenshots &&*/}
+//             {/*    <ItemScreenshot*/}
+//             {/*        screenshots={project.screenshots}*/}
+//             {/*        typeName={"screenshots"}*/}
+//             {/*        reloadForDB={getProject}*/}
+//             {/*        onlyRead={false}*/}
+//             {/*    />*/}
+//             {/*}*/}
+//
+//         </Container>
+//     )
+// }

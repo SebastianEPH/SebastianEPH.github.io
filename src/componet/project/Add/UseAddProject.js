@@ -4,14 +4,13 @@ import connectionAPI from "../../../axios";
 export const UseAddProject =(project_id)=>{
     const [project, setProject] = useState([])
     useEffect(async()=>{
-        console.log("se está ejecutando")
         await getProject()
     },[])
 
 
     const getProject = async ()=>  {
         console.log('consultado API [proforma]')
-        await connectionAPI.get(`/my/project/${project_id}`)
+        await connectionAPI.get(`/my/projects/${project_id}`)
             .then(({data})=>{
                 setProject(data)
             })
